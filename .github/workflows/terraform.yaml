@@ -1,4 +1,4 @@
-name: Terraform
+name: run-terraform-commands
 
 on: [push]
 
