@@ -21,10 +21,11 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: Directory
         run: Get-Location
       - name: Directory bash
         run: pwd
-        shell: pwd
+        shell: bash
             
