@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -14,4 +14,17 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: python command
+        run: 
+          import platform
+          print(platform.processor())
+          shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory
+        run: Get-Location
+      - name: Directory bash
+        run: pwd
+        shell: pwd
             
