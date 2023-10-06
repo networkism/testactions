@@ -1,6 +1,11 @@
 name: terraform-commands
 
 on: [push]
+env: 
+AWS_ACCESS_KEY_ID: ${{secrets.ACESS_KEY}}
+AWS_SECRET_ACCCESS_KEY: ${{secrets.SECRET_KEY}}
+
+  
 
 jobs:
   terraform:
